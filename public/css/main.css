@@ -1,0 +1,823 @@
+/*NAV pc端*/
+.navbar-fixed-top{ border-width: 0; }
+.navbar{ height: 50px; text-align: center; overflow: hidden;background-color: #1D71B4;}
+.navbar-side-toggle{ float: left; font-size: 24px; padding: 0 14px; padding-top: 10px; vertical-align: middle; display: inline-block; color: #fff;}
+.nav-side{ position: fixed; left: -17%; top: 50px; width: 17%; height: 100%; background-color: #E9E9E9; opacity:0.8;/*box-shadow: -3px 2px 11px 2px #333 inset;*/z-index: 999;padding-top: 30px; }
+.nav-side li{ text-align:left; width: 100%; padding:0px 15px 20px 15px;/*padding: 20px 15px; border-bottom: 1px solid #464646;*/}
+.nav-side li a{color: #1D71B4; font-size: 18px;text-decoration: none;}
+.nav-side li .nav-small{font-size: 12px;}
+.nav-side li a:hover {font-weight: bold;}
+#logo{ display: inline-block; margin-top: 13px; margin-left: 60px; }
+.language{ float: right; height: 100%; line-height: 50px;color: #fff;}
+.language span{ display: inline-block; width: 50px; }
+.language span.active{ background-color: #004F84;font-weight: bold;}
+
+/* overall.
+* --------------------------------------- */
+a{
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.section h1{
+	margin-top: 7%;
+	margin-bottom: 4%;
+	font-size: 48px;
+	text-align: center;
+	font-weight:900;
+}
+/*main body, shouldn't use the 'container', bacause the container in bootstrap may set the width as 90%...
+* --------------------------------------- */
+.newContainer {
+	width: 100%;
+	height: 100%;
+}
+
+.logo { 
+	text-align: center; 
+	/*vertical-align:middle;*/
+}
+
+.logo a{ 
+	display: inline-block; 
+	width: 32px; 
+	height: 32px; 
+	background-size: 32px 32px;
+}
+
+/* Full page.
+* --------------------------------------- */
+.section { 
+	/*text-align: center; */
+	overflow: hidden;
+	/*font: 50px "Microsoft Yahei"; */
+	color: #000;
+}
+#myVideo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+ 	background-color: black; /* in case the video doesn't fit the whole page*/
+  	background-image: /* our video */;
+  	background-position: center center;
+  	background-size: contain;
+   	object-fit: cover; /*cover video background */
+   	z-index:3;
+}
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer{
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	left: 0;
+	top: 85%;
+	text-align: center;
+	opacity: 0.2;
+
+	/* 
+	* Preventing flicker on some browsers 
+	* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+	*/
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+#section0 .layer:hover{
+	opacity: 1;
+}
+/* Hiding video controls 
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	video::-webkit-media-controls {
+	  display:none !important;
+	}
+
+/* About Us.
+* --------------------------------------- */
+/*#section1{
+	width: 90%;
+}*/
+.aboutUs{
+	margin:0 auto;
+	overflow: hidden;
+	*zoom: 1;
+	width: 90%;
+	background-color: black;
+	margin-top: 3%;
+}
+.section .aboutUs_des{
+	width: 26%;
+	padding-top: 3%;
+	background-color: white;
+	float: left;
+}
+.aboutUs h3{
+	font-size: 48px;
+	font-weight:900;
+
+}
+.aboutUs p{
+	font-size: 14px;
+}
+.aboutUs_img{
+	margin-left: 4%;
+	width: 70%;
+	float: right;
+}
+.aboutUs_img img{
+	width: 100%;
+	height: 100%;
+}
+
+/* Service.
+* --------------------------------------- */
+.allService{
+	margin-top: 30%;
+	margin: 0 auto;
+}
+.service{
+	/*margin: 7% 0 0 13%;*/
+	margin:0 auto;
+	width: 88%;
+	font-size: 0;  /*去掉孩子.serviceDetail之间的默认距离*/
+	overflow: hidden;
+}
+
+.serviceDetail{
+	/*width: 17%;
+	height: 30%;*/
+	display: table;
+	width: 210px;
+	height: 210px;
+	float: left;
+	margin: 0 3% 5% 3%;
+	text-align: center;
+	vertical-align: bottom;
+	background-color: #1D71B4;
+	border:4px solid #1D71B4; 
+}
+.serviceDetail:hover{
+	background-color: white;
+	border:4px solid #1D71B4;   /*移动端是2px*/
+}
+/*.serviceDetail img{
+	width: 50%;
+	height: 50%;
+}*/
+.serviceDetail h3{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 24px;
+	padding: 10%;
+	width: 11%;
+	text-align: center;
+	text-decoration: none;
+}
+.serviceDetail a{
+	color: white;
+	text-decoration: none;
+}
+
+.serviceDetail:hover a{
+	color: #1D71B4;
+}
+
+
+.serviceDetail a:hover{
+	text-decoration: none;
+}
+/* Membership.
+* --------------------------------------- */
+/*.allMembership{
+	margin-top: 1%;
+}*/
+.allMembership{
+	width: 70%;
+	margin: 0 auto;
+}
+#memberTable{
+	width: 58%;
+	margin: 0 auto;
+}
+/*.table-bordered{
+	border: 1px solid #1D71B4; 
+}*/
+.membership{
+	margin:0 auto;
+	width: 58%;
+	margin-top: 7%;
+	/*margin: 7% 20% 21% 22%;*/
+	overflow: hidden;
+	/*margin: 7% 0 0 10%;*/
+}
+.membership_img{
+	width: 12%;
+	float: left;
+	border: 1px solid #1D71B4; 
+/*	border-collapse: collapse; */
+}
+.membership_img img{
+	width: 100%;
+	height: 100%;
+}
+/*.allMembership h1{
+	margin-top: 3%;
+}*/
+
+/* Event.
+* --------------------------------------- */
+.allTheEvent {
+/*	margin-left: 22.5%*/
+	/*margin:0 auto;*/
+	/*width: 70%;*/
+	font-size: 0;  /*去掉孩子.serviceDetail之间的默认距离*/
+}
+.allEvent{
+/*	margin-left: 22.5%*/
+	margin:0 auto;
+	width: 61%;
+	/*font-size: 0; */ /*去掉孩子.serviceDetail inline-block之后产生的默认距离*/
+}
+.event{
+	margin: 0 3%;
+	display: inline-block;  
+/*	float: left;*/
+	width: 210px;
+/*	background-color: white;*/
+	/*background-color: rgba(0,0,0,1);*/
+}
+.event a h2{
+	font-size: 18px;
+	font-weight:bold;
+	color: black;
+	text-decoration: none;
+/*	padding-top: 10%;*/
+}
+.event a h3{
+	font-size: 18px;
+	color:#706F6F;
+	text-decoration: none;
+}
+.event a p{
+	font-size: 18px;
+	color:#1D71B4;
+	text-decoration: none;
+}
+.event img{
+	width: 100%;
+	height: 100%;
+}
+.eventDes{
+	background-color: rgba(233,233,233,0.7);
+}
+.eventContent{
+/*	padding-left: 10px;
+	padding-bottom: 7px;*/
+	padding: 10px 10px 7px;
+}	
+/* Contact.
+* --------------------------------------- */
+.contact{
+	margin-top: 3.9%;
+}
+.contactLeft{
+	width: 37%;
+	background-color: black;
+	float: left;
+}
+.contactLeft img{
+	width: 100%;
+	height: 100%;
+}
+.contactCover h1{
+	/*color: white;*/
+	font-size: 54px;
+}
+.contactRight{
+	width: 63%;
+	float: left;
+	margin-top: 3%;
+	padding-left: 23%;
+}
+.col-md-12 label{
+	color: #1D71B4;
+	font-size: 18px;
+}
+.col-md-12 input{
+	border: 1px solid #1D71B4;
+	height: 36px;
+	/*line-height: 50px;*/
+}
+.col-md-12 textarea{
+	height: 100px;
+	border: 1px solid #1D71B4;
+}
+/*#Firstname{
+	float: left;
+}
+#Lastname{
+	float: left;
+}*/
+/* #firstname{
+	width: 18%;
+}
+#lastname{
+	width: 18%;
+}
+#email, #subject, #message{
+	width: 41%;
+} */
+.contactRight form{
+	width: 90%;
+}
+.contactCover{
+	/*margin-top: -67%;*/
+	margin: 10% 10%;
+	position:absolute;
+    z-index:900;
+    margin-top: 9%;
+    margin-left: 9.7%;
+    width: 600px;
+    height: 500px;
+/*	width: 37%;
+	height: 37%;*/
+	background-color: rgba(209,226,231,0.7);
+/*	text-align: center;
+	display: table-cell; 
+	vertical-align: middle;*/   /*为啥不显示？？？*/
+	display: table;
+}
+.contactCover .contactInfo{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.contactCover span{
+	color: #1D71B4;
+}
+.contactCover h1{
+	color: #1D71B4;
+	margin-top: 0;
+}
+.contactCover h3,.contactCover span{
+	font-size: 18px;
+}
+#bluebtn{
+	background-color: #1D71B4;
+	border-radius: 0px;
+	color: white;
+	border: none;
+	float: right;
+}
+.form-group #rectangle{
+/*	width: 10px;
+	height: 10px;*/
+	margin-bottom: 5px;
+	border-radius: 0px;
+	border:1px solid #1D71B4; 
+	color: #1D71B4;
+	font-size: 18px;
+}
+.form-control{
+	border-radius: 0px;
+}
+/* Footer
+* --------------------------------------- */
+.footer{
+	margin-top: 100px;
+	background-color: #1c1c1b;
+	color: white;
+	z-index: 999;
+}
+.footer p{
+	font-size: 14px;
+	padding: 10px 0;
+}
+/* About BRNA page.
+* --------------------------------------- */
+.about_Us img{
+	width: 100%;
+	height: 100%;
+}
+.about_Us .aboutUs_des{
+	width: 40%;
+	margin: 0 auto;
+	position:relative;
+}
+.about_Us .aboutUs_des h1{
+	color: #1D71B4;
+	text-align: center;
+	/*margin: 10% 10%;*/
+    position:absolute;
+    z-index:990;
+    display: table-cell; 
+    /*margin-top: -30%;*/
+    margin-top: -100px;    /*要不要全部改为像素？？？还是用百分比？？？*/
+    font-size: 48px;
+    font-weight: bold;
+    width: 100%;
+}
+.about_Us .aboutUs_des h3{
+	font-weight: bold;
+	margin-top: 7%;
+	font-size: 18px;
+}
+.about_Us .aboutUs_des p{
+	font-size: 14px;
+}
+
+/* Event page.
+* --------------------------------------- */
+#event{
+	width: 62.5%;
+	margin: 0 auto;
+	position:relative;
+}
+#event h1{
+	color: #1D71B4;
+	text-align: center;
+	/*margin: 10% 10%;*/
+    position:absolute;
+    z-index:990;
+    display: table-cell; 
+    margin-top: -15%;
+    font-size: 48px;
+    font-weight: bold;
+    width: 100%;
+}
+.eventList h2{
+	font-size: 24px;
+	font-weight:900;
+	padding-top: 10%;
+}
+.eventList h3{
+	font-size: 24px;
+	color:#706F6F;
+}
+.eventList p{
+	font-size: 24px;
+	color:#1D71B4;
+}
+.eventList .img{
+	width: 10%;
+}
+.eventList img{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(233,233,233,0.7);
+}
+.eventList{
+	/*background-color: rgba(233,233,233,0.7);*/
+			/*float: left;
+			width: 19%;*/
+}
+.eventContent{
+	padding-left: 10px;
+}	
+.fixImageLeft{
+    bottom:50px;
+    display:block;
+    position:fixed;
+    left:50px;
+    /*height:100px;*/
+    /*width:100px;*/
+}
+.fixImageRight{
+	bottom:50px;
+	right:50px;
+    display:block;
+    position:fixed;
+}
+.fixImageLeft img,.fixImageRight img{
+	width: 60%;
+	height: 60%;
+}
+/* Event-->show page.
+* --------------------------------------- */
+#content{
+	width: 52%;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.show h1{
+	color: #1D71B4;
+	text-align: center;
+	font-size: 48px;
+    font-weight: bold;
+    position:absolute;
+    z-index:990;
+    display: table-cell; 
+    margin-top: -10%;
+	/*margin: 10% 10%;*/
+    width: 100%;
+}
+.show p{
+	font-size: 14px;
+}
+.show .showDate p{
+	color: #706F6F;
+}
+.show .showDate span{
+	padding: 0 25px;
+}
+.show .showTag p{
+	color: #1D71B4;
+}
+.show .showBody p{
+	margin-top: 30px;
+}
+/* Service page.
+* --------------------------------------- */
+.service_All img{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+/*.service_Des h3,p{
+	float: left;
+}*/
+.service_page{
+	width: 83%;
+	margin: 0 auto;
+/*	position: absolute;
+    z-index:990;
+    display: table-cell; 
+    margin-top: -10%;*/
+}
+.service_All h1{
+	color: #1D71B4;
+	text-align: center;
+	/*margin: 10% 10%;*/
+    position:absolute;
+    z-index:990;
+    display: table-cell; 
+    margin-top: -10%;
+    font-size: 48px;
+    font-weight: bold;
+    width: 100%;
+}
+.service_Title{
+	width: 180px;
+	height: 180px;
+	background-color: #1D71B4;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 150px;
+	margin-top:58px;
+	display: table;
+}
+#service7{
+	margin-bottom: 100px;
+}
+.service_Title a{
+	color: white;
+}
+.service_Des{
+	margin-top:58px;
+	width: 655px;
+	height: 100px;
+	font-size: 14px;
+	background-color: rgba(233,233,233,0.8);
+}
+.service_Des p{
+	padding: 30px 50px;
+}
+.service_Title:hover{
+	background-color: white;
+	border:4px solid #1D71B4;   /*移动端是2px*/
+}
+.service_Title h3{
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 24px;
+	padding: 10%;
+	width: 11%;
+	text-align: center;
+	text-decoration: none;
+}
+.service_Title a{
+	color: white;
+	text-decoration: none;
+}
+.service_Title:hover a{
+	color: #1D71B4;
+}
+.service_Title a:hover{
+	text-decoration: none;
+}
+/* Membership page.
+* --------------------------------------- */
+#rectangle{
+	width: 39px;
+	height: 39px;
+	padding: 0;
+	margin-bottom: 5px;
+	border-radius: 0px;
+	border:1px solid #1D71B4; 
+	color: #1D71B4;
+	font-size: 24px;
+}
+.members{
+	/*margin-top: 100px;*/
+}
+.membership h2{
+	color: #1D71B4;
+	text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 42px;
+    padding-bottom: 100px;
+}
+.bottom-group{
+	margin-bottom: 18px;
+}
+.members h1{
+	color: #1D71B4;
+	/*padding-top: 100px;*/
+	/*padding: 50px 0;*/
+	padding-top: 70px;
+	padding-bottom: 40px;
+	font-size: 36px;
+}
+.Members h1{
+	color: #1D71B4;
+	/*padding-top: 100px;*/
+	/*padding: 50px 0;*/
+	padding-top: 70px;
+	padding-bottom: 40px;
+	font-size: 36px;
+}
+.members .membership_img{
+	margin-right: 3px;
+	background-color: black;   /*我只是要把自己从密集恐惧症中拯救出来啊～*/
+}
+.members img{
+	width: 100%;
+	height: 100%;
+}
+
+/* GM page.
+* --------------------------------------- */
+
+section{
+	border: 1px solid grey;
+	font-size: 0;
+	/*display: relative;*/
+}
+.hide {
+    display: none;
+}
+.hidev {
+    visibility: hidden;
+}
+article {
+	width: 100%;
+	height: 74%;
+	max-width: 1200px;
+	color: #28468c;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+.MEM_img {
+    display: inline-block;
+    width: 12.5%;
+    position: relative;
+}
+#RightBottom{
+	border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+}
+#Right{
+	border-right: 1px solid grey;
+}
+#Bottom{
+	border-bottom: 1px solid grey;
+}
+.row_1 {
+    top: 0;
+}
+.row_2 {
+    top: 0%;
+}
+.row_3 {
+    top: 25%;
+}
+.row_4 {
+    /*top: 50%;*/
+    top: 50%;
+}
+.col_1 {
+    left: 0;
+}
+.col_2 {
+    left: 12.5%;
+}
+.col_3 {
+    left: 25%;
+}
+.col_4 {
+    left: 37.5%;
+}
+.col_5 {
+    left: 50%;
+}
+.col_6 {
+    left: 62.5%;
+}
+.col_7 {
+    left: 75%;
+}
+.col_8 {
+    left: 87.5%;
+}
+.MEM_info {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+}
+.col_1 {
+    left: 0;
+}
+.MEM_tips {
+    width: 12.5%;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+}
+.MEM_tips:hover {
+    background-image: url('../images/aboutus/GM_tips.png'); 
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+.MEM_tips:hover+dl {
+    visibility: visible;
+}
+.MEM_info dl {
+    width: 100%;
+    min-height: 50%;
+	padding: 1% 12.5%;
+	/*padding: 1% 3.5%;*/
+    color: #fff;
+    background-color: rgba(29, 113, 180, 0.7);
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    z-index: 1;
+}
+.MEM_info dt {
+    width: 3em;
+	font-weight: bold;
+	text-align-last: justify;
+	line-height: 2;
+	font-size: 18px;
+	padding-bottom: 14px;
+	/*letter-spacing: -4px;*/
+}
+.MEM_info dd {
+    display: block;
+	font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+    margin: 0px;
+}
+/*.r_tips {
+    transform: rotate(180deg);
+    top: 25%;
+}*/
+
+.r_tips {
+    transform: rotate(180deg);
+    top: 50%;
+}
+.r_tips~dl {
+    top: 0;
+}
+.hidev {
+    visibility: hidden;
+}
+dt, dd {
+    display: inline-block;
+    padding:0;
+    margin: 0;
+}
